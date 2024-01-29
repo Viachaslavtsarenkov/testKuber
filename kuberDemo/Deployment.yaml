@@ -2,11 +2,10 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: my-deploy
-  namespace: prod
   labels:
     app: my-deploy
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: my-deploy
@@ -18,7 +17,7 @@ spec:
     spec:
       containers:
         - name: my-deploy
-          image: tsarankouviachaslau/kuber-demo
+          image: tsarankouviachaslau/kuber-demo:1.0.0
           ports:
-            - containerPort: 8081
+            - containerPort: 8082
       
