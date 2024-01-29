@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-deploy
+  labels:
+    app: my-deploy
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: my-deploy
+  template:
+    metadata:
+      name: my-deploy
+      labels:
+        app: my-deploy
+    spec:
+      containers:
+        - name: my-deploy
+          image: tsarankouviachaslau/kuber-demo:1.0.0
+          ports:
+            - containerPort: 8082
+      
