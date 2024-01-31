@@ -1,8 +1,8 @@
 apiVersion: apps/v1
-kind: Deployment
+kind: Application
 metadata:
   name: my-deploy
-  namespace: prod
+  namespace: argocd
   labels:
     app: my-deploy
 spec:
