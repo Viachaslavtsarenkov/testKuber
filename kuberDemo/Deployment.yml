@@ -5,7 +5,7 @@ metadata:
   labels:
     app: my-deploy
 spec:
-  replicas: 2
+  replicas: 5
   selector:
     matchLabels:
       app: my-deploy
@@ -20,8 +20,3 @@ spec:
           image: tsarankouviachaslau/kuber-demo
           ports:
             - containerPort: 8081
-        - name: nginx-deploy
-          image: nginx
-          ports:
-            - containerPort: 8082
-      

@@ -11,6 +11,6 @@ public class KuberController {
 
     @GetMapping("/")
     public String getData() throws UnknownHostException {
-        return "Host name " + InetAddress.getLocalHost();
+        return "Host name " + InetAddress.getLocalHost() + Math.random();
     }
 }
