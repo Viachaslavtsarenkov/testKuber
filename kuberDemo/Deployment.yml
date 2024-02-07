@@ -20,4 +20,3 @@ spec:
           image: tsarankouviachaslau/kuber-demo
           ports:
             - containerPort: 8081
-      restartPolicy: Always
