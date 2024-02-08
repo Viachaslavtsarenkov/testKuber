@@ -1,0 +1,12 @@
+apiVersion:  apps/v1
+kind: Ingress
+metadata:
+  name: ingress-hosts
+spec:
+  rules:
+    - host: http://localhost
+      http:
+        paths:
+          - backend:
+              serviceName: main
+              servicePort: 8081
