@@ -6,12 +6,12 @@ metadata:
 spec:
   rules:
     - host: localhost
-    - http:
+      http:
         paths:
-          - backend:
+        - pathType: Prefix
+          path: /
+          backend:
               service:
                 name: localhost
                 port:
                   number: 8081
-            pathType: Prefix
-            path: /
