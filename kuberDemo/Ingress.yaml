@@ -1,7 +1,8 @@
-apiVersion: extensions/v1beta1
+apiVersion: v1
 kind: Ingress
 metadata:
   name: test-ingress
+  namespace: dev
 spec:
   rules:
     - host: localhost
