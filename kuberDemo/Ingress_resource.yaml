@@ -5,7 +5,7 @@ metadata:
   namespace: default
 spec:
   rules:
-    - host: argo.by
+    - host: argocd.by
       http:
         paths:
         - pathType: Prefix
