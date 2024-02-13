@@ -5,7 +5,7 @@ metadata:
   namespace: default
 spec:
   rules:
-    - host: localhost:8081
+    - host: argo.by
       http:
         paths:
         - pathType: Prefix
