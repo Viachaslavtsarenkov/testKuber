@@ -6,11 +6,11 @@ metadata:
 spec:
   rules:
     - host: localhost
-      http:
+    - http:
         paths:
           - backend:
               service:
-                name: argo-service
+                name: localhost
                 port:
                   number: 8081
             pathType: Prefix
