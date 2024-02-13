@@ -1,11 +1,18 @@
-apiVersion: apps/v1
 kind: Service
+apiVersion: v1
 metadata:
-  name: nginx-svc
+  name: ingress-nginx
+  namespace: ingress-nginx
+  labels:
+    app.kubernetes.io/name: ingress-nginx
+    app.kubernetes.io/part-of: ingress-nginx
 spec:
+  externalTrafficPolicy: Local
+  type: LoadBalancer
   selector:
-    name: nginx
+    app.kubernetes.io/name: ingress-nginx
+    app.kubernetes.io/part-of: ingress-nginx
   ports:
-    - port: 8081
-      targetPort: 8081
-      protocol: TCP
+    - name: http
+      port: 8081
+      targetPort: http
