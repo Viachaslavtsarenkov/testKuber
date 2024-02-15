@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
         - name: my-deploy
-          image: tsarankouviachaslau/kuber-demo
+          image: tsarankouviachaslau/kuber-demo:4.0.0
           ports:
             - containerPort: 8081
