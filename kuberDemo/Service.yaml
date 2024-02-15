@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: test-service
+  name: my-deploy
 spec:
   selector:
-    app: argo-app
+    app: my-deploy
   ports:
     - protocol: TCP
       port: 8081
