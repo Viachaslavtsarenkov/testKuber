@@ -5,7 +5,7 @@ metadata:
   namespace: default
 spec:
   rules:
-    - host: "localhost:8081"
+    - host: localhost
       http:
         paths:
         - pathType: Prefix
