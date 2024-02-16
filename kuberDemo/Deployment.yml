@@ -17,10 +17,6 @@ spec:
     spec:
       containers:
         - name: my-deploy
-          resources:
-            requests:
-              cpu: 200m
-              memory: 10Mi
           image: tsarankouviachaslau/kuber-demo:4.0.0
           ports:
             - containerPort: 8081
