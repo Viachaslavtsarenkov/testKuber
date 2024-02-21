@@ -11,3 +11,7 @@ spec:
       port: 8080
       targetPort: 8081
   type: NodePort
+  sessionAffinity: ClientIP
+  sessionAffinityConfig:
+    clientIP:
+      timeoutSeconds: 5
