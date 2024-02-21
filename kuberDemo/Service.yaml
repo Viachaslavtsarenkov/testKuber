@@ -10,8 +10,4 @@ spec:
     - protocol: TCP
       port: 8080
       targetPort: 8081
-  type: NodePort
-  sessionAffinity: ClientIP
-  sessionAffinityConfig:
-    clientIP:
-      timeoutSeconds: 5
+  type: LoadBalancer
