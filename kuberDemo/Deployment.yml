@@ -21,4 +21,6 @@ spec:
           image: tsarankouviachaslau/kuber-demo:latest
           ports:
             - containerPort: 8081
+      terminationGracePeriodSeconds: 5
+
 
