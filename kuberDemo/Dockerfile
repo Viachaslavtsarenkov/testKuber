@@ -1,6 +1,6 @@
 FROM openjdk:17
 VOLUME /tmp
-EXPOSE 8081
+EXPOSE 8080
 ARG JAR_FILE=build/libs/kuberDemo.jar
 ADD ${JAR_FILE} app.jar
 ENTRYPOINT ["java","-jar","app.jar"]

@@ -20,7 +20,7 @@ spec:
         - name: my-deploy
           image: tsarankouviachaslau/kuber-demo:latest
           ports:
-            - containerPort: 8081
+            - containerPort: 8080
       terminationGracePeriodSeconds: 5
 
 
