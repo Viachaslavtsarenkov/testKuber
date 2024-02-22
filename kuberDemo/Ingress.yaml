@@ -1,19 +1,14 @@
-apiVersion: networking.k8s.io/v1
+apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: my-deploy-ingress
-  namespace: dev
+  name: deploy-ingress
   annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /
+    ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
-    - host: argo.application
-      http:
+    - http:
         paths:
           - path: /
-            pathType: Prefix
             backend:
-              service:
-                name: my-deploy
-                port:
-                  number: 8081
+              serviceName: my-deploy
+              servicePort: 8081
